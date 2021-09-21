@@ -1,0 +1,193 @@
+/* ==============
+    VARIABLES
+================= */
+
+:root {
+  /* main colors */
+  --mainBG: hsl(233, 47%, 7%);
+  --cardBG: hsl(244, 38%, 16%);
+  --accentColour: hsl(277, 64%, 61%);
+
+  /* white shades */
+  --mainWhite: hsl(0, 0%, 100%);
+  --mainText: hsla(0, 0%, 100%, 0.75);
+  --statsHeading: hsla(0, 0%, 100%, 0.6);
+
+  /* font weights */
+  --normal: 400;
+  --heavy: 700;
+}
+
+/* ================
+    GLOBAL RESETS
+==================== */
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  
+}
+
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  background-color: var(--mainBG);
+  color: var(--mainWhite);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+
+
+/* =====================
+    MAIN CONTAINER
+======================= */
+.main-container {
+  width: 90vw;
+  border-radius: 20px;
+  background: var(--cardBG);
+}
+
+/* =========================
+    IMAGE
+=========================== */
+.hero-image {
+  height: 239px;
+  position: relative;
+  border-radius: 20px 20px 0 0;
+  background-color: var(--accentColour);
+}
+
+.hero-image:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+  background: url("./images/image-header-mobile.jpg");
+  opacity: 0.40;
+  background-size: cover;
+}
+
+/* =========================
+    TEXT CONTENT
+=========================== */
+
+.content-body {
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  padding: .9em 0;
+}
+
+.accent {
+  color: var(--accentColour);
+}
+
+.blurb {
+  color: var(--mainText);
+  line-height: 1.8em;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 1.6rem;
+  font-weight: var(--heavy);
+  padding: 0.5em 0;
+}
+
+.stat {
+  margin: 0.5em 0;
+}
+
+.category {
+  text-transform: uppercase;
+  color: var(--statsHeading);
+  font-size: 0.9rem;
+  font-weight: var(--normal);
+}
+
+
+
+/* ====================
+    MEDIA QUERIES
+======================= */
+
+@media screen and (min-width: 768px){
+
+  .content-body{
+    padding: 70px 0;
+  }
+  .stats {
+    width: 330px;
+    margin: 0 auto;
+    padding-top: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+}
+
+@media screen and (min-width: 1024px) {
+  .main-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1111px;
+  }
+
+  .hero-image{
+    grid-area: 1/2;
+    height: 100%;
+    border-radius: 0 20px 20px 0;
+  }
+
+  .hero-image:before {
+    border-radius: 0 20px 20px 0;
+    background: url("./images/image-header-desktop.jpg");
+    background-size: cover;
+  }
+
+  .content-body{
+    text-align: left;
+    max-width: 370px;
+    padding: 70px;
+  }
+
+  .blurb {
+    padding-top: 1em;
+  }
+
+  .stats{
+    margin: unset;
+  }
+
+}
+
+
+
+/* ======================
+    ATTRIBUTION STYLES
+========================= */
+.attribution {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-size: 11px;
+  text-align: center;
+  padding-bottom: .5em;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
