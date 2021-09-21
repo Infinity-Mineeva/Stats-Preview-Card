@@ -41,8 +41,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/stats-preview-card-html-css-css-grid-NZYch7HHQ](https://www.frontendmentor.io/solutions/stats-preview-card-html-css-css-grid-NZYch7HHQ)
+- Live Site URL: [http://Infinity-Mineeva.github.io/Stats-Preview-Card/](http://infinity-mineeva.github.io/Stats-Preview-Card/)
 
 ## My process
 
